@@ -18,6 +18,7 @@ public class Programa {
             user.setNome(respNome);
         } catch (Exception e) {
             System.out.println("informe letras.");
+            sc.close();
         }
 
         try {
@@ -59,10 +60,28 @@ public class Programa {
                 case "não", "nao":
                     System.out.println("tenha um ótimo dia!");
                     sc.close();
+                    break;
             }
         } catch (Exception e) {
             System.out.println("informe com letras.");
         }
+
+//        System.out.println("quer saber seu IMC? ");
+//        String simNao = sc.next();
+//        sc.nextLine();
+//
+//        if (simaNao == "sim" ) {
+//            System.out.println("seu IMC é: " + c.CalculoIMC());
+//        }
+//
+//        if (simaNao == "nao" + "não") {
+//            System.out.println("tenha um ótimo dia!");
+//            sc.close();
+//        }
+//
+//        if (simNao != "nao" + "não" + "sim") {
+//            System.out.println("informe com letras.");
+//        }
 
     }
 }
