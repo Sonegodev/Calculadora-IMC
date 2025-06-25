@@ -18,9 +18,6 @@ public class Programa {
             user.setNome(respNome);
         } catch (Exception e) {
             System.out.println("informe letras.");
-        } finally {
-            System.out.println("tente novamente.");
-            sc.close();
         }
 
         try {
@@ -30,9 +27,6 @@ public class Programa {
             user.setAltura(respAltura);
         } catch (Exception e) {
             System.out.println("informe com vírgula.");
-        } finally {
-            System.out.println("tente novamente.");
-            sc.close();
         }
 
         try {
@@ -42,9 +36,6 @@ public class Programa {
             user.setPeso(respPeso);
         } catch (Exception e) {
             System.out.println("informe um inteiro ou com vírgula.");
-        } finally {
-            System.out.println("tente novamente.");
-            sc.close();
         }
 
         try {
@@ -54,9 +45,6 @@ public class Programa {
             user.setIdade(respIdade);
         } catch (Exception e) {
             System.out.println("informe um inteiro.");
-        } finally {
-            System.out.println("tente novamente.");
-            sc.close();
         }
 
         try {
@@ -74,9 +62,7 @@ public class Programa {
             }
         } catch (Exception e) {
             System.out.println("informe com letras.");
-        } finally {
-            System.out.println("tente novamente.");
-            sc.close();
         }
+
     }
 }
