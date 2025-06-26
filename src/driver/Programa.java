@@ -66,6 +66,8 @@ public class Programa {
             System.out.println("informe com letras.");
         }
 
+        // reformatar if's e else's
+
 //        System.out.println("quer saber seu IMC? ");
 //        String simNao = sc.next();
 //        sc.nextLine();
