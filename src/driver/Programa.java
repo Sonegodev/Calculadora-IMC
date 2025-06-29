@@ -19,15 +19,24 @@ public class Programa {
         } catch (Exception e) {
             System.out.println("informe letras.");
             sc.close();
+            System.exit(0);
         }
 
         try {
             System.out.println("me informe sua altura (m): ");
             Float respAltura = sc.nextFloat();
             sc.nextLine();
+
+            if (respAltura > 3) {
+                respAltura = respAltura / 100;
+            }
+
             user.setAltura(respAltura);
+
         } catch (Exception e) {
-            System.out.println("informe com vírgula.");
+            System.out.println("informe números.");
+            sc.close();
+            System.exit(0);
         }
 
         try {
@@ -36,7 +45,9 @@ public class Programa {
             sc.nextLine();
             user.setPeso(respPeso);
         } catch (Exception e) {
-            System.out.println("informe um inteiro ou com vírgula.");
+            System.out.println("informe números.");
+            sc.close();
+            System.exit(0);
         }
 
         try {
@@ -45,45 +56,21 @@ public class Programa {
             sc.nextLine();
             user.setIdade(respIdade);
         } catch (Exception e) {
-            System.out.println("informe um inteiro.");
+            System.out.println("informe números.");
+            sc.close();
+            System.exit(0);
         }
 
-        try {
-            System.out.println("quer saber seu IMC? ");
-            String simNao = sc.next();
-            sc.nextLine();
-            switch (simNao) {
-                case "sim":
-                    System.out.println("seu IMC é: " + c.CalculoIMC());
-                    break;
+        System.out.println("deseja saber seu IMC? (s/n)");
+        String opcao = sc.nextLine();
 
-                case "não", "nao":
-                    System.out.println("tenha um ótimo dia!");
-                    sc.close();
-                    break;
-            }
-        } catch (Exception e) {
-            System.out.println("informe com letras.");
+        if (opcao.equals("s")) {
+            System.out.println("ótimo! seu IMC é: " + c.CalculoIMC());
+        } else {
+            System.out.println("obrigado!");
+            sc.close();
+            System.exit(0);
         }
-
-        // reformatar if's e else's
-
-//        System.out.println("quer saber seu IMC? ");
-//        String simNao = sc.next();
-//        sc.nextLine();
-//
-//        if (simaNao == "sim" ) {
-//            System.out.println("seu IMC é: " + c.CalculoIMC());
-//        }
-//
-//        if (simaNao == "nao" + "não") {
-//            System.out.println("tenha um ótimo dia!");
-//            sc.close();
-//        }
-//
-//        if (simNao != "nao" + "não" + "sim") {
-//            System.out.println("informe com letras.");
-//        }
 
     }
 }
