@@ -7,4 +7,4 @@ o programa solicita ao usuário que digite:
 
 depois ele calcula o imc usando a fórmula. com o resultado, o programa mostra o nivel de IMC
 
-feito por [@sonegodev](https://github.com/Sonegodev)
+desenvolvido por [Sonegodev](https://github.com/Sonegodev)
